@@ -1,0 +1,20 @@
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.exe.config
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.exe
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.pdb
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.AssemblyReference.cache
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.Form1.resources
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.Properties.Resources.resources
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.GenerateResource.cache
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.CoreCompileInputs.cache
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.exe
+D:\Coding_Programming\C#\School_Prog\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.pdb
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.exe.config
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.exe
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\bin\Debug\Tokenizer.pdb
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.AssemblyReference.cache
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.Form1.resources
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.Properties.Resources.resources
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.GenerateResource.cache
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.csproj.CoreCompileInputs.cache
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.exe
+C:\Users\Jhouvann\OneDrive\Desktop\College\2ND YEAR\PROG LANGUAGE\Final\ProgLang_Tokenizer\ProgLang_Tokenizer\Tokenizer\obj\Debug\Tokenizer.pdb
