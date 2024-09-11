@@ -56,6 +56,12 @@ namespace Tokenizer
                         isBuildingPunctuation = false;
                     }
                 }
+                // Check if the character is a space
+                else if (char.IsWhiteSpace(ch))
+                {
+                    // Ignore spaces
+                    continue;
+                }
                 // Check if character is part of a number (digits and at most one decimal point)
                 else if (char.IsDigit(ch))
                 {
@@ -113,6 +119,7 @@ namespace Tokenizer
 
             return tokens;
         }
+
 
 
 
