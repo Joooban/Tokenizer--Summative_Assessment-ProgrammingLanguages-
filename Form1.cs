@@ -166,9 +166,7 @@ namespace Tokenizer
             if (token.Contains('.') && token.Count(char.IsDigit) > 0 && token.Count(c => c == '.') <= 1)
                 return "Number";
 
-            char[] symbolsToExclude = new char[] { '@', '#', '$', '%', '&', '*', '(', ')' };
-            // Check if the token consists of punctuation ug dili kana sa taas
-            if (token.All(c => char.IsPunctuation(c) && !symbolsToExclude.Contains(c)))
+            if (token.All(char.IsPunctuation))
                 return "Punctuation";
 
             // Default case for special characters
@@ -178,7 +176,6 @@ namespace Tokenizer
 
         private List<(string, string, List<char>)> BreakdownTokens(List<string> tokens, char selectedDelimiter)
         {
-            // Ga store daw siya ug duha ka string then list of char, which idk unsa hahaha
             // Good way to visualize : First Name, Family Name, Gender (M/F)
             List<(string, string, List<char>)> breakdown = new List<(string, string, List<char>)>();
 
