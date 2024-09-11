@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +29,7 @@ namespace Tokenizer
             {
                 cbDelimeter.Items.Add(delimiter);
             }
-            cbDelimeter.SelectedIndex = 0; // para si space ang una magpakita instead of blank
+            cbDelimeter.SelectedIndex = 5; // para si hyphen ang una magpakita instead of blank
         }
 
         private List<string> Tokenize(string text, char[] delimiters)
@@ -38,6 +38,7 @@ namespace Tokenizer
             StringBuilder currentToken = new StringBuilder();
             bool isBuildingNumber = false;  // Flag to indicate if currently building a number token
             bool hasDecimalPoint = false;   // Flag to track if a decimal point has been encountered in a number
+            bool isBuildingPunctuation = false;  // Flag for grouping punctuation
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -52,6 +53,7 @@ namespace Tokenizer
                         currentToken.Clear();
                         isBuildingNumber = false;
                         hasDecimalPoint = false;
+                        isBuildingPunctuation = false;
                     }
                 }
                 // Check if character is part of a number (digits and at most one decimal point)
@@ -59,6 +61,7 @@ namespace Tokenizer
                 {
                     currentToken.Append(ch);
                     isBuildingNumber = true;
+                    isBuildingPunctuation = false;
                 }
                 else if (ch == '.' && isBuildingNumber && !hasDecimalPoint && i + 1 < text.Length && char.IsDigit(text[i + 1]))
                 {
@@ -70,52 +73,32 @@ namespace Tokenizer
                 else if (char.IsLetterOrDigit(ch))
                 {
                     currentToken.Append(ch);
+                    isBuildingPunctuation = false;
                 }
-                // Check if character is punctuation and should be separated
+                // Check if character is punctuation and should be grouped
                 else if (char.IsPunctuation(ch))
                 {
-                    if (currentToken.Length > 0)
+                    if (!isBuildingPunctuation)
                     {
-                        tokens.Add(currentToken.ToString());
-                        currentToken.Clear();
-                        isBuildingNumber = false;
-                        hasDecimalPoint = false;
+                        if (currentToken.Length > 0)
+                        {
+                            tokens.Add(currentToken.ToString());
+                            currentToken.Clear();
+                        }
+                        isBuildingPunctuation = true;
                     }
-
-                    tokens.Add(ch.ToString());  // Add punctuation as a separate token
-                }
-                else if (ch == '\r' && i + 1 < text.Length && text[i + 1] == '\n')  // Windows new line
-                {
-                    if (currentToken.Length > 0)
-                    {
-                        tokens.Add(currentToken.ToString());
-                        currentToken.Clear();
-                    }
-                    tokens.Add("\n");  // Add "\n" as the token for the end of line
-                    i++; // Skip the next '\n' to prevent double-counting
-                    isBuildingNumber = false;
-                    hasDecimalPoint = false;
-                }
-                else if (ch == '\n')  // Unix/MacOS new line
-                {
-                    if (currentToken.Length > 0)
-                    {
-                        tokens.Add(currentToken.ToString());
-                        currentToken.Clear();
-                    }
-                    tokens.Add("\n");  // Add "\n" as the token for the end of line
-                    isBuildingNumber = false;
-                    hasDecimalPoint = false;
+                    currentToken.Append(ch);  // Group punctuation characters
                 }
                 else
                 {
-                    // If we were building a number but hit a non-number character, finalize the current token
-                    if (isBuildingNumber)
+                    // If we were building a token but hit a non-token character, finalize the current token
+                    if (currentToken.Length > 0)
                     {
                         tokens.Add(currentToken.ToString());
                         currentToken.Clear();
                         isBuildingNumber = false;
                         hasDecimalPoint = false;
+                        isBuildingPunctuation = false;
                     }
 
                     currentToken.Append(ch);
@@ -130,6 +113,7 @@ namespace Tokenizer
 
             return tokens;
         }
+
 
 
 
@@ -170,7 +154,7 @@ namespace Tokenizer
                 return "Punctuation";
 
             // Default case for special characters
-            return "Special Characters";
+            return "Special Characters/Undefined";
         }
 
 
